@@ -93,7 +93,7 @@ export class AppComponent {
     var totalSlotss=this.slots.toString();
     params = params.append('slots', totalSlotss);
     this.httpService.get(this.serviceUrl+"initializeFreeSlots",{params:params}).subscribe(d=>{
-        
+        this.getvehileList();
   })
 }
 exitVehicle(slotNo:string){
